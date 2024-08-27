@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "NFID_project_janice_backend": {
+      "main": "src/NFID_project_janice_backend/main.mo",
+      "type": "motoko"
+    },
+    "NFID_project_janice_frontend": {
+      "dependencies": [
+        "NFID_project_janice_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/NFID_project_janice_frontend/src/index.html"
+      },
+      "source": [
+        "src/NFID_project_janice_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "NFID_project_janice_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "version": 1
+}
