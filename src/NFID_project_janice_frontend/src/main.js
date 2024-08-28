@@ -1,4 +1,11 @@
 import App from './App';
 import './index.scss';
+import { AuthClient } from '@dfinity/auth-client';
 
-const app = new App();
+let authClient = null;
+
+async function init() {
+    authClient = await AuthClient.create();
+    new App(authClient);
+}
+document.addEventListener('DOMContentLoaded', init);
